@@ -1,0 +1,153 @@
+:root {
+  --bg-color: #000000;
+  --color-headings: #b9b8b8;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+
+  background: var(--bg-color);
+}
+.btn {
+  align-self: center;
+  margin: 15px 0;
+}
+.cursor {
+  width: 22px;
+  height: 22px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 150ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+}
+
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 2px solid rgb(27, 27, 27);
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -2px;
+  left: -2px;
+}
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--color-headings);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+@keyframes cursorAnim {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+
+.title {
+  border: 1px solid red;
+  overflow-x: hidden;
+  height: 70vh;
+  width: 45%;
+
+  padding-left: 7%;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .sub-title {
+    border: 1px solid red;
+    color: white;
+    font-size: 1.9rem;
+    letter-spacing: 2px;
+    font-family: "Manrope", sans-serif;
+    .wave {
+      height: 2rem;
+    }
+  }
+  .main-title {
+    margin-top: 6%;
+    border: 1px solid red;
+    line-height: 1.7;
+    color: white;
+    font-size: 1.9rem;
+
+    font-family: "Manrope", sans-serif;
+    .name {
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+  }
+
+  .sub-contact-details {
+    border: 1px solid red;
+    font-family: "Manrope", sans-serif;
+    margin-top: 15%;
+    font-size: 1.4rem;
+    color: white;
+    .pointoright {
+      height: 1.1rem;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .mail-link {
+      font-family: "Manrope", sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+      border-bottom: 3px solid #007bff;
+      padding-bottom: 2px;
+    }
+  }
+}

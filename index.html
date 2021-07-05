@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="main.css" />
+
+    <title>Jeenu Chacko | Software Engineer</title>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="btn">
+      <input type="checkbox" name="check" id="check" />
+      <label for="check">
+        <div class="box">
+          <div class="ball"></div>
+        </div>
+      </label>
+    </div>
+
+    <div class="title">
+      <div class="sub-title">
+        Hello! <img class="wave" src="./imgs/emojis/wave.png" alt="" />
+      </div>
+      <div class="main-title">
+        I'm <span class="name"> Jeenu Chacko</span>, a front-end Software
+        Engineer 💻<br />
+        I like to design and code beautiful things
+      </div>
+
+      <div class="sub-contact-details">
+        Get in touch
+        <img class="pointoright" src="./imgs/emojis/pointright.png" alt="" />
+        <span
+          ><a class="mail-link" href="mailto:jeenu.chacko7@gmail.com"
+            >jeenu.chacko7@gmail.com</a
+          ></span
+        >
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const cursor = document.querySelector(".cursor");
+    document.addEventListener("mousemove", (e) => {
+      cursor.setAttribute(
+        "style",
+        "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;"
+      );
+    });
+    document.addEventListener("click", () => {
+      cursor.classList.add("expand");
+      setTimeout(() => {
+        cursor.classList.remove("expand");
+      }, 500);
+    });
+  </script>
+</html>

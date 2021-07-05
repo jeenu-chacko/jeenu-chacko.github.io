@@ -1,0 +1,190 @@
+:root {
+  --bg-color: #000000;
+  --color-headings: #b9b8b8;
+}
+
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: var(--bg-color);
+}
+
+.btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 15px 0;
+}
+
+.cursor {
+  width: 22px;
+  height: 22px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-animation: cursorAnim 0.5s infinite alternate;
+          animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+}
+
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 2px solid #1b1b1b;
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -2px;
+  left: -2px;
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--color-headings);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  -webkit-transition: all 750ms !important;
+  transition: all 750ms !important;
+  -webkit-transition-delay: 0 !important;
+          transition-delay: 0 !important;
+}
+
+@-webkit-keyframes cursorAnim {
+  from {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@keyframes cursorAnim {
+  from {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  to {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+.title {
+  border: 1px solid red;
+  overflow-x: hidden;
+  height: 70vh;
+  width: 45%;
+  padding-left: 7%;
+  margin-top: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.title .sub-title {
+  border: 1px solid red;
+  color: white;
+  font-size: 1.9rem;
+  letter-spacing: 2px;
+  font-family: "Manrope", sans-serif;
+}
+
+.title .sub-title .wave {
+  height: 2rem;
+}
+
+.title .main-title {
+  margin-top: 6%;
+  border: 1px solid red;
+  line-height: 1.7;
+  color: white;
+  font-size: 1.9rem;
+  font-family: "Manrope", sans-serif;
+}
+
+.title .main-title .name {
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.title .sub-contact-details {
+  border: 1px solid red;
+  font-family: "Manrope", sans-serif;
+  margin-top: 15%;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.title .sub-contact-details .pointoright {
+  height: 1.1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.title .sub-contact-details .mail-link {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 2px;
+}
+/*# sourceMappingURL=main.css.map */
