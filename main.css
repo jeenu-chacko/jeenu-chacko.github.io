@@ -1,6 +1,6 @@
 :root {
   --bg-color: #171c28;
-  --color-headings: #b9b8b8;
+  --color-headings: #bae67e;
 }
 
 @font-face {
@@ -17,7 +17,7 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
   background: var(--bg-color);
   cursor: none;
 }
@@ -199,10 +199,36 @@ html.transition *:after {
   padding-bottom: 2px;
 }
 
-@media screen and (max-width: 992px) {
+.main-section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-section .background-title {
+  font-size: 1.5rem;
+  width: 50%;
+  padding-right: 3%;
+  padding-top: 5%;
+  padding-left: 5%;
+  font-family: "ApercuBold", sans-serif;
+  color: #007bff;
+}
+
+.main-section .background-details {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #e7e7e7;
+  padding-top: 5%;
+  padding-right: 5%;
+  font-family: "AperRegular", sans-serif;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .title {
     margin-top: -30px;
-    height: 100vh;
+    height: calc(max-width+10px);
     width: 70%;
     padding: 0;
     display: -webkit-box;
@@ -216,6 +242,9 @@ html.transition *:after {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .title .btn {
+    margin-top: -40%;
+  }
   .title .sub-title {
     -ms-flex-item-align: start;
         align-self: flex-start;
@@ -228,10 +257,9 @@ html.transition *:after {
     height: 2rem;
   }
   .title .main-title {
-    margin-top: 13%;
-    line-height: 1.2;
+    line-height: 1.5;
     color: #e7e7e7;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     max-width: 700px;
     font-family: "ApercuRegular", sans-serif;
   }
@@ -255,9 +283,123 @@ html.transition *:after {
     font-weight: 400;
     text-decoration: none;
     color: #e7e7e7;
-    padding-top: 4px;
     border-bottom: 2px solid #007bff;
     padding-bottom: 2px;
+  }
+  .main-section {
+    margin-top: 4%;
+    padding: 2%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-section .background-title {
+    width: 70%;
+    font-size: 1rem;
+    padding: 4%;
+    font-family: "ApercuBold", sans-serif;
+    color: #007bff;
+  }
+  .main-section .background-details {
+    width: 70%;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e7e7e7;
+    padding: 4%;
+    font-family: "AperRegular", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .title {
+    height: 100vh;
+    width: 40%;
+    padding-top: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .title .btn {
+    margin-top: -10%;
+  }
+  .title .sub-title {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    color: #e7e7e7;
+    font-size: 3.8rem;
+    letter-spacing: 1px;
+    font-family: "ApercuRegular", sans-serif;
+  }
+  .title .sub-title .wave {
+    height: 3.8rem;
+  }
+  .title .main-title {
+    line-height: 1.5;
+    color: #e7e7e7;
+    font-size: 3.8rem;
+    max-width: 700px;
+    font-family: "ApercuRegular", sans-serif;
+  }
+  .title .main-title .name {
+    font-family: "ApercuBold", sans-serif;
+    font-weight: 700;
+  }
+  .title .sub-contact-details {
+    font-family: "ApercuRegular", sans-serif;
+    margin-top: 35%;
+    font-size: 2.2rem;
+    color: #e7e7e7;
+  }
+  .title .sub-contact-details .pointoright {
+    height: 2.6rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .title .sub-contact-details .mail-link {
+    font-family: "AperRegular", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: #e7e7e7;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 2px;
+  }
+  .main-section {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-section .background-title {
+    padding-top: 5%;
+    padding-left: 5%;
+  }
+  .main-section .background-details {
+    padding-top: 5%;
+    padding-right: 5%;
   }
 }
 /*# sourceMappingURL=main.css.map */

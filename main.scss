@@ -1,6 +1,6 @@
 :root {
   --bg-color: #171c28;
-  --color-headings: #b9b8b8;
+  --color-headings: #bae67e;
 }
 
 @font-face {
@@ -16,7 +16,7 @@
 body {
   margin: 0;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
   background: var(--bg-color);
   cursor: none;
 }
@@ -161,17 +161,41 @@ html.transition *:after {
     }
   }
 }
+.main-section {
+  height: 100vh;
+  display: flex;
 
-@media screen and (max-width: 992px) {
+  .background-title {
+    font-size: 1.52rem;
+    width: 50%;
+    padding-right: 3%;
+    padding-top: 5%;
+    padding-left: 5%;
+    font-family: "ApercuBold", sans-serif;
+    color: #007bff;
+  }
+  .background-details {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #e7e7e7;
+    padding-top: 5%;
+    padding-right: 5%;
+    font-family: "AperRegular", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
   .title {
     margin-top: -30px;
-    height: 100vh;
+    height: calc(max-width+10px);
     width: 70%;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    .btn {
+      margin-top: -40%;
+    }
     .sub-title {
       align-self: flex-start;
       color: #e7e7e7;
@@ -183,11 +207,9 @@ html.transition *:after {
       }
     }
     .main-title {
-      margin-top: 13%;
-
-      line-height: 1.2;
+      line-height: 1.5;
       color: #e7e7e7;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       max-width: 700px;
 
       font-family: "ApercuRegular", sans-serif;
@@ -208,15 +230,138 @@ html.transition *:after {
         padding-left: 10px;
         padding-right: 10px;
       }
+
       .mail-link {
         font-family: "AperRegular", sans-serif;
         font-weight: 400;
         text-decoration: none;
         color: #e7e7e7;
-        padding-top: 4px;
+
         border-bottom: 2px solid #007bff;
         padding-bottom: 2px;
       }
+    }
+  }
+  .main-section {
+    margin-top: 4%;
+    padding: 2%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .background-title {
+      width: 70%;
+      font-size: 1rem;
+      padding: 4%;
+
+      font-family: "ApercuBold", sans-serif;
+      color: #007bff;
+    }
+    .background-details {
+      width: 70%;
+      font-size: 0.91rem;
+      line-height: 1.6;
+      color: #e7e7e7;
+      padding: 4%;
+      font-family: "AperRegular", sans-serif;
+    }
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .title {
+    height: 100vh;
+    width: 40%;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .btn {
+      margin-top: -10%;
+    }
+    .sub-title {
+      align-self: flex-start;
+      color: #e7e7e7;
+      font-size: 3.8rem;
+      letter-spacing: 1px;
+      font-family: "ApercuRegular", sans-serif;
+      .wave {
+        height: 3.8rem;
+      }
+    }
+    .main-title {
+      line-height: 1.5;
+      color: #e7e7e7;
+      font-size: 3.8rem;
+      max-width: 700px;
+
+      font-family: "ApercuRegular", sans-serif;
+      .name {
+        font-family: "ApercuBold", sans-serif;
+        font-weight: 700;
+      }
+    }
+
+    .sub-contact-details {
+      font-family: "ApercuRegular", sans-serif;
+      margin-top: 35%;
+      font-size: 2.2rem;
+      color: #e7e7e7;
+
+      .pointoright {
+        height: 2.6rem;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .mail-link {
+        font-family: "AperRegular", sans-serif;
+        font-weight: 400;
+        text-decoration: none;
+        color: #e7e7e7;
+
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 2px;
+      }
+    }
+  }
+  .main-section {
+    height: 100vh;
+    display: flex;
+
+    .background-title {
+      padding-top: 5%;
+      padding-left: 5%;
+    }
+    .background-details {
+      padding-top: 5%;
+      padding-right: 5%;
+    }
+  }
+  .main-section {
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+
+    .background-title {
+      font-size: 1.52rem;
+
+      padding-right: 3%;
+      padding-top: 5%;
+      padding-left: 5%;
+      font-family: "ApercuBold", sans-serif;
+      color: #007bff;
+    }
+    .background-details {
+      width: 30%;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      color: #e7e7e7;
+      padding-top: 5%;
+      padding-right: 5%;
+      font-family: "AperRegular", sans-serif;
     }
   }
 }
