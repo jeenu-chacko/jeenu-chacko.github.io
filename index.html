@@ -17,16 +17,10 @@
   </head>
   <body>
     <div class="cursor"></div>
+
     <header>
+      <div id="particles-js"></div>
       <div class="title">
-        <div class="btn">
-          <input type="checkbox" name="check" id="check" />
-          <label for="check">
-            <div class="box">
-              <div class="ball"></div>
-            </div>
-          </label>
-        </div>
         <div class="sub-title">
           Hello! <img class="wave" src="./imgs/emojis/wave.png" alt="" />
         </div>
@@ -47,6 +41,7 @@
         </div>
       </div>
     </header>
+
     <div class="main-section">
       <div class="background-title">Background</div>
       <div class="background-details">
@@ -59,12 +54,12 @@
         I am an enthusiastic and trustworthy person, seeking challenging
         opportunities to come up with out-of-the-box solutions to inspire and
         encourage others in the field of technology. Having a wide range of
-        technical skills and excellent interpersonal abilities, I believe that I
-        can become an asset to any organization.
+        technical skills and excellent interpersonal abilities.
       </div>
     </div>
   </body>
-
+  <script type="text/javascript" src="particles.js"></script>
+  <script type="text/javascript" src="app.js"></script>
   <script>
     const cursor = document.querySelector(".cursor");
     document.addEventListener("mousemove", (e) => {

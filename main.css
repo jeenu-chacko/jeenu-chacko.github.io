@@ -54,60 +54,6 @@ body {
   left: -2px;
 }
 
-input[type="checkbox"] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
-
-label {
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 52px;
-  height: 27px;
-  background: grey;
-  float: right;
-  border-radius: 100px;
-  position: relative;
-}
-
-label:after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
-  background: #e7e7e7;
-  border-radius: 90px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-input:checked + label {
-  background: var(--color-headings);
-}
-
-input:checked + label:after {
-  left: calc(100% - 5px);
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-label:active:after {
-  width: 45px;
-}
-
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-  -webkit-transition: all 750ms !important;
-  transition: all 750ms !important;
-  -webkit-transition-delay: 0 !important;
-          transition-delay: 0 !important;
-}
-
 @-webkit-keyframes cursorAnim {
   from {
     -webkit-transform: scale(1.1);
@@ -128,6 +74,12 @@ html.transition *:after {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
   }
+}
+
+#particles-js {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .title {
@@ -152,7 +104,7 @@ html.transition *:after {
 
 .title .sub-title {
   color: #e7e7e7;
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   letter-spacing: 2px;
   font-family: "ApercuRegular", sans-serif;
 }
@@ -165,20 +117,19 @@ html.transition *:after {
   margin-top: 8%;
   line-height: 1.5;
   color: #e7e7e7;
-  font-size: 2rem;
+  font-size: 1.92rem;
   max-width: 700px;
   font-family: "ApercuRegular", sans-serif;
 }
 
 .title .main-title .name {
   font-family: "ApercuBold", sans-serif;
-  font-weight: 700;
 }
 
 .title .sub-contact-details {
   font-family: "ApercuRegular", sans-serif;
   margin-top: 10%;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: #e7e7e7;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -200,37 +151,45 @@ html.transition *:after {
 }
 
 .main-section {
-  height: 100vh;
+  margin-bottom: 10%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main-section .background-title {
-  font-size: 1.5rem;
+  letter-spacing: 2.61px;
+  font-size: 1.14rem;
   width: 50%;
   padding-right: 3%;
   padding-top: 5%;
-  padding-left: 5%;
-  font-family: "ApercuBold", sans-serif;
+  padding-left: 19%;
+  font-family: "ApercuRegular", sans-serif;
+  font-weight: 600;
   color: #007bff;
 }
 
 .main-section .background-details {
-  font-size: 1.5rem;
-  line-height: 1.6;
+  letter-spacing: 1.1px;
+  font-size: 1.15rem;
+  line-height: 1.7;
   color: #e7e7e7;
   padding-top: 5%;
-  padding-right: 5%;
+  padding-right: 10%;
   font-family: "AperRegular", sans-serif;
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
   .title {
-    margin-top: -30px;
-    height: calc(max-width+10px);
+    margin-top: 2%;
+    height: 99vh;
     width: 70%;
-    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -243,13 +202,13 @@ html.transition *:after {
             align-items: flex-start;
   }
   .title .btn {
-    margin-top: -40%;
+    margin-top: -10%;
   }
   .title .sub-title {
     -ms-flex-item-align: start;
         align-self: flex-start;
     color: #e7e7e7;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     letter-spacing: 1px;
     font-family: "ApercuRegular", sans-serif;
   }
@@ -257,9 +216,9 @@ html.transition *:after {
     height: 2rem;
   }
   .title .main-title {
-    line-height: 1.5;
+    line-height: 1.7;
     color: #e7e7e7;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     max-width: 700px;
     font-family: "ApercuRegular", sans-serif;
   }
@@ -270,7 +229,7 @@ html.transition *:after {
   .title .sub-contact-details {
     font-family: "ApercuRegular", sans-serif;
     margin-top: 35%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #e7e7e7;
   }
   .title .sub-contact-details .pointoright {
@@ -283,12 +242,13 @@ html.transition *:after {
     font-weight: 400;
     text-decoration: none;
     color: #e7e7e7;
+    font-size: 1rem;
     border-bottom: 2px solid #007bff;
     padding-bottom: 2px;
   }
   .main-section {
-    margin-top: 4%;
-    padding: 2%;
+    margin-top: 1%;
+    margin-bottom: 2%;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -310,15 +270,117 @@ html.transition *:after {
     width: 70%;
     font-size: 1rem;
     padding: 4%;
+    letter-spacing: 1.1px;
+    font-family: "ApercuBold", sans-serif;
+    color: #007bff;
+  }
+  .main-section .background-details {
+    width: 73%;
+    letter-spacing: 1.1px;
+    font-size: 0.91rem;
+    line-height: 1.6;
+    color: #e7e7e7;
+    padding: 4%;
+    font-family: "AperRegular", sans-serif;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .title {
+    height: 100vh;
+    width: 50%;
+    margin: 0 auto;
+    padding-left: 7%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .title .sub-title {
+    color: #e7e7e7;
+    font-size: 1.52rem;
+    letter-spacing: 2px;
+    font-family: "ApercuRegular", sans-serif;
+  }
+  .title .sub-title .wave {
+    height: 2rem;
+  }
+  .title .main-title {
+    margin-top: 8%;
+    line-height: 1.5;
+    color: #e7e7e7;
+    font-size: 1.52rem;
+    font-family: "ApercuRegular", sans-serif;
+  }
+  .title .main-title .name {
+    font-family: "ApercuBold", sans-serif;
+    font-weight: 700;
+  }
+  .title .sub-contact-details {
+    font-family: "ApercuRegular", sans-serif;
+    margin-top: 15%;
+    font-size: 1.15rem;
+    color: #e7e7e7;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .title .sub-contact-details .pointoright {
+    height: 1.6rem;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .title .sub-contact-details .mail-link {
+    font-family: "AperRegular", sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: #e7e7e7;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 2px;
+  }
+  .main-section {
+    margin-top: 4%;
+    margin-bottom: 2%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-section .background-title {
+    width: 70%;
+    font-size: 1.1rem;
+    padding: 3%;
+    letter-spacing: 1.1px;
     font-family: "ApercuBold", sans-serif;
     color: #007bff;
   }
   .main-section .background-details {
     width: 70%;
-    font-size: 1rem;
+    letter-spacing: 1.1px;
+    font-size: 1.1rem;
     line-height: 1.6;
     color: #e7e7e7;
-    padding: 4%;
+    padding: 1%;
     font-family: "AperRegular", sans-serif;
   }
 }
@@ -327,7 +389,6 @@ html.transition *:after {
   .title {
     height: 100vh;
     width: 40%;
-    padding-top: 10%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -357,7 +418,6 @@ html.transition *:after {
     line-height: 1.5;
     color: #e7e7e7;
     font-size: 3.8rem;
-    max-width: 700px;
     font-family: "ApercuRegular", sans-serif;
   }
   .title .main-title .name {
@@ -366,32 +426,15 @@ html.transition *:after {
   }
   .title .sub-contact-details {
     font-family: "ApercuRegular", sans-serif;
-    margin-top: 35%;
-    font-size: 2.2rem;
-    color: #e7e7e7;
+    font-size: 2.4rem;
   }
   .title .sub-contact-details .pointoright {
-    height: 2.6rem;
     padding-left: 10px;
     padding-right: 10px;
   }
   .title .sub-contact-details .mail-link {
-    font-family: "AperRegular", sans-serif;
-    font-weight: 400;
-    text-decoration: none;
     color: #e7e7e7;
-    border-bottom: 2px solid #007bff;
     padding-bottom: 2px;
-  }
-  .main-section {
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   .main-section .background-title {
     padding-top: 5%;
@@ -400,6 +443,38 @@ html.transition *:after {
   .main-section .background-details {
     padding-top: 5%;
     padding-right: 5%;
+  }
+  .main-section {
+    margin-bottom: 5%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-section .background-title {
+    font-size: 2.62rem;
+    width: 10%;
+    padding-right: 3%;
+    padding-top: 5%;
+    padding-left: 5%;
+  }
+  .main-section .background-details {
+    margin-left: 6%;
+    letter-spacing: 1.1px;
+    width: 55%;
+    font-size: 2.6rem;
+    line-height: 1.6;
+    padding-top: 5%;
+    padding-right: 2%;
   }
 }
 /*# sourceMappingURL=main.css.map */

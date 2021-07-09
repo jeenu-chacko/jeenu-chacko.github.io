@@ -23,6 +23,7 @@ body {
 .btn {
   align-self: flex-end;
 }
+
 .cursor {
   width: 22px;
   height: 22px;
@@ -46,55 +47,7 @@ body {
   top: -2px;
   left: -2px;
 }
-input[type="checkbox"] {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-}
 
-label {
-  cursor: pointer;
-  text-indent: -9999px;
-  width: 52px;
-  height: 27px;
-  background: grey;
-  float: right;
-  border-radius: 100px;
-  position: relative;
-}
-
-label:after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 20px;
-  height: 20px;
-  background: #e7e7e7;
-  border-radius: 90px;
-  transition: 0.3s;
-}
-
-input:checked + label {
-  background: var(--color-headings);
-}
-
-input:checked + label:after {
-  left: calc(100% - 5px);
-  transform: translateX(-100%);
-}
-
-label:active:after {
-  width: 45px;
-}
-
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-  transition: all 750ms !important;
-  transition-delay: 0 !important;
-}
 @keyframes cursorAnim {
   from {
     transform: scale(1.1);
@@ -102,6 +55,12 @@ html.transition *:after {
   to {
     transform: scale(0.7);
   }
+}
+
+#particles-js {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .title {
@@ -117,7 +76,7 @@ html.transition *:after {
 
   .sub-title {
     color: #e7e7e7;
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     letter-spacing: 2px;
     font-family: "ApercuRegular", sans-serif;
     .wave {
@@ -129,20 +88,19 @@ html.transition *:after {
 
     line-height: 1.5;
     color: #e7e7e7;
-    font-size: 2rem;
+    font-size: 1.92rem;
     max-width: 700px;
 
     font-family: "ApercuRegular", sans-serif;
     .name {
       font-family: "ApercuBold", sans-serif;
-      font-weight: 700;
     }
   }
 
   .sub-contact-details {
     font-family: "ApercuRegular", sans-serif;
     margin-top: 10%;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     color: #e7e7e7;
     align-self: flex-start;
 
@@ -162,44 +120,50 @@ html.transition *:after {
   }
 }
 .main-section {
-  height: 100vh;
+  margin-bottom: 10%;
+  height: max-content;
   display: flex;
+  justify-content: center;
 
   .background-title {
-    font-size: 1.52rem;
+    letter-spacing: 2.61px;
+    font-size: 1.14rem;
     width: 50%;
     padding-right: 3%;
     padding-top: 5%;
-    padding-left: 5%;
-    font-family: "ApercuBold", sans-serif;
+    padding-left: 19%;
+    font-family: "ApercuRegular", sans-serif;
+    font-weight: 600;
     color: #007bff;
   }
   .background-details {
-    font-size: 1.5rem;
-    line-height: 1.6;
+    letter-spacing: 1.1px;
+    font-size: 1.15rem;
+    line-height: 1.7;
     color: #e7e7e7;
     padding-top: 5%;
-    padding-right: 5%;
+    padding-right: 10%;
+
     font-family: "AperRegular", sans-serif;
   }
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
   .title {
-    margin-top: -30px;
-    height: calc(max-width+10px);
+    margin-top: 2%;
+    height: 99vh;
     width: 70%;
-    padding: 0;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     .btn {
-      margin-top: -40%;
+      margin-top: -10%;
     }
     .sub-title {
       align-self: flex-start;
       color: #e7e7e7;
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       letter-spacing: 1px;
       font-family: "ApercuRegular", sans-serif;
       .wave {
@@ -207,9 +171,9 @@ html.transition *:after {
       }
     }
     .main-title {
-      line-height: 1.5;
+      line-height: 1.7;
       color: #e7e7e7;
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       max-width: 700px;
 
       font-family: "ApercuRegular", sans-serif;
@@ -222,7 +186,7 @@ html.transition *:after {
     .sub-contact-details {
       font-family: "ApercuRegular", sans-serif;
       margin-top: 35%;
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: #e7e7e7;
 
       .pointoright {
@@ -236,6 +200,7 @@ html.transition *:after {
         font-weight: 400;
         text-decoration: none;
         color: #e7e7e7;
+        font-size: 1rem;
 
         border-bottom: 2px solid #007bff;
         padding-bottom: 2px;
@@ -243,8 +208,8 @@ html.transition *:after {
     }
   }
   .main-section {
-    margin-top: 4%;
-    padding: 2%;
+    margin-top: 1%;
+    margin-bottom: 2%;
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -255,12 +220,13 @@ html.transition *:after {
       width: 70%;
       font-size: 1rem;
       padding: 4%;
-
+      letter-spacing: 1.1px;
       font-family: "ApercuBold", sans-serif;
       color: #007bff;
     }
     .background-details {
-      width: 70%;
+      width: 73%;
+      letter-spacing: 1.1px;
       font-size: 0.91rem;
       line-height: 1.6;
       color: #e7e7e7;
@@ -270,11 +236,95 @@ html.transition *:after {
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .title {
+    height: 100vh;
+    width: 50%;
+    margin: 0 auto;
+    padding-left: 7%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .sub-title {
+      color: #e7e7e7;
+      font-size: 1.52rem;
+      letter-spacing: 2px;
+      font-family: "ApercuRegular", sans-serif;
+      .wave {
+        height: 2rem;
+      }
+    }
+    .main-title {
+      margin-top: 8%;
+      line-height: 1.5;
+      color: #e7e7e7;
+      font-size: 1.52rem;
+
+      font-family: "ApercuRegular", sans-serif;
+      .name {
+        font-family: "ApercuBold", sans-serif;
+        font-weight: 700;
+      }
+    }
+
+    .sub-contact-details {
+      font-family: "ApercuRegular", sans-serif;
+      margin-top: 15%;
+      font-size: 1.15rem;
+      color: #e7e7e7;
+      align-self: flex-start;
+
+      .pointoright {
+        height: 1.6rem;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .mail-link {
+        font-family: "AperRegular", sans-serif;
+        font-weight: 300;
+        text-decoration: none;
+        color: #e7e7e7;
+        border-bottom: 3px solid #007bff;
+        padding-bottom: 2px;
+      }
+    }
+  }
+  .main-section {
+    margin-top: 4%;
+    margin-bottom: 2%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .background-title {
+      width: 70%;
+      font-size: 1.1rem;
+      padding: 3%;
+      letter-spacing: 1.1px;
+      font-family: "ApercuBold", sans-serif;
+      color: #007bff;
+    }
+    .background-details {
+      width: 70%;
+      letter-spacing: 1.1px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #e7e7e7;
+      padding: 1%;
+      font-family: "AperRegular", sans-serif;
+    }
+  }
+}
+
 @media only screen and (min-width: 2000px) {
   .title {
     height: 100vh;
     width: 40%;
-    padding-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -295,8 +345,6 @@ html.transition *:after {
       line-height: 1.5;
       color: #e7e7e7;
       font-size: 3.8rem;
-      max-width: 700px;
-
       font-family: "ApercuRegular", sans-serif;
       .name {
         font-family: "ApercuBold", sans-serif;
@@ -306,31 +354,21 @@ html.transition *:after {
 
     .sub-contact-details {
       font-family: "ApercuRegular", sans-serif;
-      margin-top: 35%;
-      font-size: 2.2rem;
-      color: #e7e7e7;
+      font-size: 2.4rem;
 
       .pointoright {
-        height: 2.6rem;
         padding-left: 10px;
         padding-right: 10px;
       }
 
       .mail-link {
-        font-family: "AperRegular", sans-serif;
-        font-weight: 400;
-        text-decoration: none;
         color: #e7e7e7;
 
-        border-bottom: 2px solid #007bff;
         padding-bottom: 2px;
       }
     }
   }
   .main-section {
-    height: 100vh;
-    display: flex;
-
     .background-title {
       padding-top: 5%;
       padding-left: 5%;
@@ -341,27 +379,26 @@ html.transition *:after {
     }
   }
   .main-section {
-    height: 40vh;
+    margin-bottom: 5%;
+    height: max-content;
     display: flex;
     flex-direction: row;
-
+    justify-content: center;
     .background-title {
-      font-size: 1.52rem;
-
+      font-size: 2.62rem;
+      width: 10%;
       padding-right: 3%;
       padding-top: 5%;
       padding-left: 5%;
-      font-family: "ApercuBold", sans-serif;
-      color: #007bff;
     }
     .background-details {
-      width: 30%;
-      font-size: 1.5rem;
+      margin-left: 6%;
+      letter-spacing: 1.1px;
+      width: 55%;
+      font-size: 2.6rem;
       line-height: 1.6;
-      color: #e7e7e7;
       padding-top: 5%;
-      padding-right: 5%;
-      font-family: "AperRegular", sans-serif;
+      padding-right: 2%;
     }
   }
 }
