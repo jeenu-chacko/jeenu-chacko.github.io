@@ -56,6 +56,32 @@ body {
     transform: scale(0.7);
   }
 }
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
 #particles-js {
   position: absolute;
@@ -81,6 +107,10 @@ body {
     font-family: "ApercuRegular", sans-serif;
     .wave {
       height: 2rem;
+      animation-name: wave-animation;
+      animation-duration: 2.5s;
+      animation-iteration-count: infinite;
+      transform-origin: 70% 70%;
     }
   }
   .main-title {
@@ -123,12 +153,10 @@ body {
   margin-bottom: 10%;
   height: max-content;
   display: flex;
-  justify-content: center;
 
   .background-title {
     letter-spacing: 2.61px;
     font-size: 1.14rem;
-    width: 50%;
     padding-right: 3%;
     padding-top: 5%;
     padding-left: 19%;
@@ -144,7 +172,43 @@ body {
     padding-top: 5%;
     padding-right: 10%;
 
-    font-family: "AperRegular", sans-serif;
+    font-family: "ApercuRegular", sans-serif;
+  }
+}
+
+.skill {
+  margin-bottom: 10%;
+  display: flex;
+  height: max-content;
+  .skill-main-title {
+    letter-spacing: 2.61px;
+    font-size: 1.14rem;
+    padding-right: 11%;
+    padding-top: 5%;
+    padding-left: 19%;
+    font-family: "ApercuRegular", sans-serif;
+    font-weight: 600;
+    color: #007bff;
+  }
+
+  .skill-sub-title {
+    padding-top: 5%;
+    font-family: "ApercuRegular", sans-serif;
+    letter-spacing: 1.1px;
+    padding-right: 10%;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #e7e7e7;
+
+    .skill-list li {
+      position: relative;
+      padding-left: 15px;
+      letter-spacing: 1.1px;
+
+      line-height: 1.7;
+      color: #e7e7e7;
+      font-family: "ApercuRegular", sans-serif;
+    }
   }
 }
 
@@ -234,6 +298,43 @@ body {
       font-family: "AperRegular", sans-serif;
     }
   }
+  .skill {
+    margin-top: 14%;
+    margin-bottom: 2%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .skill-main-title {
+      width: 70%;
+      font-size: 1rem;
+      padding: 4%;
+      letter-spacing: 1.1px;
+      font-family: "ApercuBold", sans-serif;
+      color: #007bff;
+    }
+
+    .skill-sub-title {
+      width: 73%;
+      letter-spacing: 1.1px;
+      font-size: 0.91rem;
+      line-height: 1.6;
+      color: #e7e7e7;
+      padding: 4%;
+      font-family: "AperRegular", sans-serif;
+
+      .skill-list li {
+        position: relative;
+        padding-left: 15px;
+        letter-spacing: 1.1px;
+        font-size: 0.91rem;
+        line-height: 1.7;
+        color: #e7e7e7;
+        font-family: "ApercuRegular", sans-serif;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
@@ -319,6 +420,43 @@ body {
       font-family: "AperRegular", sans-serif;
     }
   }
+  .skill {
+    margin-top: 4%;
+    margin-bottom: 2%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .skill-main-title {
+      width: 70%;
+      font-size: 1.1rem;
+      padding: 3%;
+      letter-spacing: 1.1px;
+      font-family: "ApercuBold", sans-serif;
+      color: #007bff;
+    }
+
+    .skill-sub-title {
+      width: 70%;
+      letter-spacing: 1.1px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #e7e7e7;
+      padding: 1%;
+      font-family: "AperRegular", sans-serif;
+
+      .skill-list li {
+        position: relative;
+        padding-left: 15px;
+        letter-spacing: 1.1px;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #e7e7e7;
+        font-family: "ApercuRegular", sans-serif;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 2000px) {
@@ -399,6 +537,46 @@ body {
       line-height: 1.6;
       padding-top: 5%;
       padding-right: 2%;
+    }
+  }
+
+  .skill {
+    margin-bottom: 5%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .skill-main-title {
+      letter-spacing: 2.61px;
+      font-size: 2.62rem;
+      width: 10%;
+      padding-right: 3%;
+      padding-top: 5%;
+      padding-left: 5%;
+      font-weight: 600;
+      color: #007bff;
+    }
+
+    .skill-sub-title {
+      padding-top: 5%;
+      font-family: "ApercuRegular", sans-serif;
+      margin-left: 6%;
+      letter-spacing: 1.1px;
+      width: 55%;
+      font-size: 2.6rem;
+      line-height: 1.6;
+      padding-right: 2%;
+      color: #e7e7e7;
+
+      .skill-list li {
+        position: relative;
+        padding-left: 15px;
+        letter-spacing: 1.1px;
+
+        line-height: 1.7;
+        color: #e7e7e7;
+        font-family: "ApercuRegular", sans-serif;
+      }
     }
   }
 }

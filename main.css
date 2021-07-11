@@ -76,6 +76,80 @@ body {
   }
 }
 
+@-webkit-keyframes wave-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+  }
+  30% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  40% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  /* Reset for the last half to pause */
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+  }
+  30% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  40% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  /* Reset for the last half to pause */
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 #particles-js {
   position: absolute;
   height: 100%;
@@ -111,6 +185,14 @@ body {
 
 .title .sub-title .wave {
   height: 2rem;
+  -webkit-animation-name: wave-animation;
+          animation-name: wave-animation;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-transform-origin: 70% 70%;
+          transform-origin: 70% 70%;
 }
 
 .title .main-title {
@@ -158,15 +240,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .main-section .background-title {
   letter-spacing: 2.61px;
   font-size: 1.14rem;
-  width: 50%;
   padding-right: 3%;
   padding-top: 5%;
   padding-left: 19%;
@@ -182,7 +260,47 @@ body {
   color: #e7e7e7;
   padding-top: 5%;
   padding-right: 10%;
-  font-family: "AperRegular", sans-serif;
+  font-family: "ApercuRegular", sans-serif;
+}
+
+.skill {
+  margin-bottom: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.skill .skill-main-title {
+  letter-spacing: 2.61px;
+  font-size: 1.14rem;
+  padding-right: 11%;
+  padding-top: 5%;
+  padding-left: 19%;
+  font-family: "ApercuRegular", sans-serif;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.skill .skill-sub-title {
+  padding-top: 5%;
+  font-family: "ApercuRegular", sans-serif;
+  letter-spacing: 1.1px;
+  padding-right: 10%;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #e7e7e7;
+}
+
+.skill .skill-sub-title .skill-list li {
+  position: relative;
+  padding-left: 15px;
+  letter-spacing: 1.1px;
+  line-height: 1.7;
+  color: #e7e7e7;
+  font-family: "ApercuRegular", sans-serif;
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -282,6 +400,52 @@ body {
     color: #e7e7e7;
     padding: 4%;
     font-family: "AperRegular", sans-serif;
+  }
+  .skill {
+    margin-top: 14%;
+    margin-bottom: 2%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .skill .skill-main-title {
+    width: 70%;
+    font-size: 1rem;
+    padding: 4%;
+    letter-spacing: 1.1px;
+    font-family: "ApercuBold", sans-serif;
+    color: #007bff;
+  }
+  .skill .skill-sub-title {
+    width: 73%;
+    letter-spacing: 1.1px;
+    font-size: 0.91rem;
+    line-height: 1.6;
+    color: #e7e7e7;
+    padding: 4%;
+    font-family: "AperRegular", sans-serif;
+  }
+  .skill .skill-sub-title .skill-list li {
+    position: relative;
+    padding-left: 15px;
+    letter-spacing: 1.1px;
+    font-size: 0.91rem;
+    line-height: 1.7;
+    color: #e7e7e7;
+    font-family: "ApercuRegular", sans-serif;
   }
 }
 
@@ -383,6 +547,52 @@ body {
     padding: 1%;
     font-family: "AperRegular", sans-serif;
   }
+  .skill {
+    margin-top: 4%;
+    margin-bottom: 2%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .skill .skill-main-title {
+    width: 70%;
+    font-size: 1.1rem;
+    padding: 3%;
+    letter-spacing: 1.1px;
+    font-family: "ApercuBold", sans-serif;
+    color: #007bff;
+  }
+  .skill .skill-sub-title {
+    width: 70%;
+    letter-spacing: 1.1px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e7e7e7;
+    padding: 1%;
+    font-family: "AperRegular", sans-serif;
+  }
+  .skill .skill-sub-title .skill-list li {
+    position: relative;
+    padding-left: 15px;
+    letter-spacing: 1.1px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e7e7e7;
+    font-family: "ApercuRegular", sans-serif;
+  }
 }
 
 @media only screen and (min-width: 2000px) {
@@ -475,6 +685,51 @@ body {
     line-height: 1.6;
     padding-top: 5%;
     padding-right: 2%;
+  }
+  .skill {
+    margin-bottom: 5%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .skill .skill-main-title {
+    letter-spacing: 2.61px;
+    font-size: 2.62rem;
+    width: 10%;
+    padding-right: 3%;
+    padding-top: 5%;
+    padding-left: 5%;
+    font-weight: 600;
+    color: #007bff;
+  }
+  .skill .skill-sub-title {
+    padding-top: 5%;
+    font-family: "ApercuRegular", sans-serif;
+    margin-left: 6%;
+    letter-spacing: 1.1px;
+    width: 55%;
+    font-size: 2.6rem;
+    line-height: 1.6;
+    padding-right: 2%;
+    color: #e7e7e7;
+  }
+  .skill .skill-sub-title .skill-list li {
+    position: relative;
+    padding-left: 15px;
+    letter-spacing: 1.1px;
+    line-height: 1.7;
+    color: #e7e7e7;
+    font-family: "ApercuRegular", sans-serif;
   }
 }
 /*# sourceMappingURL=main.css.map */
