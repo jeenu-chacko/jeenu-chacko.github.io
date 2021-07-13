@@ -141,7 +141,6 @@ body {
     }
     .mail-link {
       font-family: "AperRegular", sans-serif;
-      font-weight: 400;
       text-decoration: none;
       color: #e7e7e7;
       border-bottom: 3px solid #007bff;
@@ -209,6 +208,41 @@ body {
       color: #e7e7e7;
       font-family: "ApercuRegular", sans-serif;
     }
+    .resume {
+      font-family: "ApercuBold", sans-serif;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 1.2rem;
+      letter-spacing: 1.4px;
+    }
+    .arrow {
+      color: #e7e7e7;
+      margin: 1em 0;
+
+      &::after {
+        color: #007bff;
+        display: inline-block;
+        padding-left: 8px;
+        content: "\0279E";
+        font-size: 1, 2rem;
+        -webkit-transition: transform 0.3s ease-out;
+        -moz-transition: transform 0.3s ease-out;
+        -ms-transition: transform 0.3s ease-out;
+        -o-transition: transform 0.3s ease-out;
+        transition: transform 0.3s ease-out;
+      }
+
+      &:hover {
+        &::after {
+          -webkit-transform: translateX(4px);
+          -moz-transform: translateX(4px);
+          -ms-transform: translateX(4px);
+          -o-transform: translateX(4px);
+          transform: translateX(4px);
+        }
+      }
+    }
   }
 }
 
@@ -261,7 +295,6 @@ body {
 
       .mail-link {
         font-family: "AperRegular", sans-serif;
-        font-weight: 400;
         text-decoration: none;
         color: #e7e7e7;
         font-size: 1rem;
@@ -385,7 +418,6 @@ body {
       }
       .mail-link {
         font-family: "AperRegular", sans-serif;
-        font-weight: 300;
         text-decoration: none;
         color: #e7e7e7;
         border-bottom: 3px solid #007bff;
