@@ -187,8 +187,8 @@ body {
   height: 2rem;
   -webkit-animation-name: wave-animation;
           animation-name: wave-animation;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-transform-origin: 70% 70%;
@@ -325,7 +325,6 @@ body {
   display: inline-block;
   padding-left: 8px;
   content: "\0279E";
-  font-size: larger;
   -webkit-transition: transform 0.3s ease-out;
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
@@ -481,6 +480,10 @@ body {
     color: #e7e7e7;
     font-family: "ApercuRegular", sans-serif;
   }
+  .skill .skill-sub-title .resume {
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
@@ -626,6 +629,16 @@ body {
     color: #e7e7e7;
     font-family: "ApercuRegular", sans-serif;
   }
+  .resume {
+    font-family: "ApercuBold", sans-serif;
+    display: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+  }
 }
 
 @media only screen and (min-width: 2000px) {
@@ -763,6 +776,10 @@ body {
     line-height: 1.7;
     color: #e7e7e7;
     font-family: "ApercuRegular", sans-serif;
+  }
+  .skill .skill-sub-title .resume {
+    font-size: 2.61rem;
+    letter-spacing: 4.7px;
   }
 }
 /*# sourceMappingURL=main.css.map */
