@@ -199,7 +199,7 @@ body {
   margin-top: 8%;
   line-height: 1.5;
   color: #e7e7e7;
-  font-size: 1.92rem;
+  font-size: 1.9rem;
   max-width: 700px;
   font-family: "ApercuRegular", sans-serif;
 }
@@ -243,7 +243,7 @@ body {
 
 .main-section .background-title {
   letter-spacing: 2.61px;
-  font-size: 1.14rem;
+  font-size: 1.15rem;
   padding-right: 3%;
   padding-top: 5%;
   padding-left: 19%;
@@ -274,7 +274,7 @@ body {
 
 .skill .skill-main-title {
   letter-spacing: 2.61px;
-  font-size: 1.14rem;
+  font-size: 1.15rem;
   padding-right: 11%;
   padding-top: 5%;
   padding-left: 19%;
@@ -337,7 +337,21 @@ body {
   transform: translateX(4px);
 }
 
+.contact .contact-main-title {
+  letter-spacing: 2.61px;
+  font-size: 1.15rem;
+  padding-right: 11%;
+  padding-top: 5%;
+  padding-left: 19%;
+  font-family: "ApercuRegular", sans-serif;
+  font-weight: 600;
+  color: #007bff;
+}
+
 @media only screen and (min-width: 200px) and (max-width: 767px) {
+  .cursor {
+    display: none;
+  }
   .title {
     margin-top: 2%;
     height: 99vh;
@@ -421,6 +435,7 @@ body {
     width: 70%;
     font-size: 1rem;
     padding: 4%;
+    padding-left: 0;
     letter-spacing: 1.1px;
     font-family: "ApercuBold", sans-serif;
     color: #007bff;
@@ -458,6 +473,7 @@ body {
     width: 70%;
     font-size: 1rem;
     padding: 4%;
+    padding-left: 0;
     letter-spacing: 1.1px;
     font-family: "ApercuBold", sans-serif;
     color: #007bff;
@@ -483,6 +499,35 @@ body {
   .skill .skill-sub-title .resume {
     font-size: 1rem;
     letter-spacing: 1.4px;
+  }
+  .contact {
+    margin-top: 14%;
+    margin-bottom: 2%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact .contact-main-title {
+    width: 70%;
+    font-size: 1rem;
+    padding: 4%;
+    padding-left: 0;
+    letter-spacing: 1.1px;
+    font-family: "ApercuBold", sans-serif;
+    color: #007bff;
   }
 }
 
@@ -639,6 +684,34 @@ body {
     font-size: 1rem;
     letter-spacing: 1.4px;
   }
+  .contact {
+    margin-top: 4%;
+    margin-bottom: 2%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact .contact-main-title {
+    width: 70%;
+    font-size: 1.1rem;
+    padding: 3%;
+    letter-spacing: 1.1px;
+    font-family: "ApercuBold", sans-serif;
+    color: #007bff;
+  }
 }
 
 @media only screen and (min-width: 2000px) {
@@ -780,6 +853,32 @@ body {
   .skill .skill-sub-title .resume {
     font-size: 2.61rem;
     letter-spacing: 4.7px;
+  }
+  .contact {
+    margin-bottom: 5%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact .contact-main-title {
+    letter-spacing: 2.61px;
+    font-size: 2.62rem;
+    width: 10%;
+    padding-right: 3%;
+    padding-top: 5%;
+    padding-left: 5%;
+    font-weight: 600;
+    color: #007bff;
   }
 }
 /*# sourceMappingURL=main.css.map */

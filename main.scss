@@ -118,7 +118,7 @@ body {
 
     line-height: 1.5;
     color: #e7e7e7;
-    font-size: 1.92rem;
+    font-size: 1.9rem;
     max-width: 700px;
 
     font-family: "ApercuRegular", sans-serif;
@@ -155,7 +155,7 @@ body {
 
   .background-title {
     letter-spacing: 2.61px;
-    font-size: 1.14rem;
+    font-size: 1.15rem;
     padding-right: 3%;
     padding-top: 5%;
     padding-left: 19%;
@@ -181,7 +181,7 @@ body {
   height: max-content;
   .skill-main-title {
     letter-spacing: 2.61px;
-    font-size: 1.14rem;
+    font-size: 1.15rem;
     padding-right: 11%;
     padding-top: 5%;
     padding-left: 19%;
@@ -246,6 +246,10 @@ body {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
+  .cursor {
+    display: none;
+  }
+
   .title {
     margin-top: 2%;
     height: 99vh;
@@ -316,6 +320,7 @@ body {
       width: 70%;
       font-size: 1rem;
       padding: 4%;
+      padding-left: 0;
       letter-spacing: 1.1px;
       font-family: "ApercuBold", sans-serif;
       color: #007bff;
@@ -342,6 +347,7 @@ body {
       width: 70%;
       font-size: 1rem;
       padding: 4%;
+      padding-left: 0;
       letter-spacing: 1.1px;
       font-family: "ApercuBold", sans-serif;
       color: #007bff;
