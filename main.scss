@@ -176,7 +176,7 @@ body {
 }
 
 .skill {
-  margin-bottom: 10%;
+  margin-bottom: 6%;
   display: flex;
   height: max-content;
   .skill-main-title {
@@ -240,6 +240,43 @@ body {
           -o-transform: translateX(4px);
           transform: translateX(4px);
         }
+      }
+    }
+  }
+}
+
+.projects {
+  margin-bottom: 6%;
+  display: flex;
+  height: max-content;
+  .project-title {
+    letter-spacing: 2.61px;
+    font-size: 1.15rem;
+    padding-right: 11%;
+    padding-top: 5%;
+    padding-left: 19%;
+    font-family: "ApercuRegular", sans-serif;
+    font-weight: 600;
+    color: #007bff;
+  }
+  .project-list {
+    .project-item {
+      .project__used__item {
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.5;
+        visibility: visible;
+        box-sizing: inherit;
+        display: inline-block;
+        margin: 3px 3px 3px 0;
+        font-family: Inconsolata, monospace;
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 2px 7px;
+        border-radius: 3px;
+        color: #007bff;
+        border: 1px solid #007bff;
+        background: 0 0;
+        margin-left: 0;
       }
     }
   }

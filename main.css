@@ -263,7 +263,7 @@ body {
 }
 
 .skill {
-  margin-bottom: 10%;
+  margin-bottom: 6%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,7 +337,17 @@ body {
   transform: translateX(4px);
 }
 
-.contact .contact-main-title {
+.projects {
+  margin-bottom: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.projects .project-title {
   letter-spacing: 2.61px;
   font-size: 1.15rem;
   padding-right: 11%;
@@ -346,6 +356,25 @@ body {
   font-family: "ApercuRegular", sans-serif;
   font-weight: 600;
   color: #007bff;
+}
+
+.projects .project-list .project-item .project__used__item {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  visibility: visible;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  display: inline-block;
+  margin: 3px 3px 3px 0;
+  font-family: Inconsolata, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  color: #007bff;
+  border: 1px solid #007bff;
+  background: 0 0;
+  margin-left: 0;
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -499,35 +528,6 @@ body {
   .skill .skill-sub-title .resume {
     font-size: 1rem;
     letter-spacing: 1.4px;
-  }
-  .contact {
-    margin-top: 14%;
-    margin-bottom: 2%;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .contact .contact-main-title {
-    width: 70%;
-    font-size: 1rem;
-    padding: 4%;
-    padding-left: 0;
-    letter-spacing: 1.1px;
-    font-family: "ApercuBold", sans-serif;
-    color: #007bff;
   }
 }
 
@@ -684,34 +684,6 @@ body {
     font-size: 1rem;
     letter-spacing: 1.4px;
   }
-  .contact {
-    margin-top: 4%;
-    margin-bottom: 2%;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .contact .contact-main-title {
-    width: 70%;
-    font-size: 1.1rem;
-    padding: 3%;
-    letter-spacing: 1.1px;
-    font-family: "ApercuBold", sans-serif;
-    color: #007bff;
-  }
 }
 
 @media only screen and (min-width: 2000px) {
@@ -853,32 +825,6 @@ body {
   .skill .skill-sub-title .resume {
     font-size: 2.61rem;
     letter-spacing: 4.7px;
-  }
-  .contact {
-    margin-bottom: 5%;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .contact .contact-main-title {
-    letter-spacing: 2.61px;
-    font-size: 2.62rem;
-    width: 10%;
-    padding-right: 3%;
-    padding-top: 5%;
-    padding-left: 5%;
-    font-weight: 600;
-    color: #007bff;
   }
 }
 /*# sourceMappingURL=main.css.map */
