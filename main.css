@@ -233,9 +233,6 @@ body {
 
 .main-section {
   margin-bottom: 10%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,13 +240,14 @@ body {
 
 .main-section .background-title {
   letter-spacing: 2.61px;
-  font-size: 1.15rem;
-  padding-right: 3%;
+  font-size: 1.05rem;
+  padding-right: 8%;
   padding-top: 5%;
-  padding-left: 19%;
+  padding-left: 15%;
   font-family: "ApercuRegular", sans-serif;
   font-weight: 600;
   color: #007bff;
+  width: 15%;
 }
 
 .main-section .background-details {
@@ -267,20 +265,21 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  width: 90%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .skill .skill-main-title {
   letter-spacing: 2.61px;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   padding-right: 11%;
   padding-top: 5%;
-  padding-left: 19%;
+  padding-left: 18%;
   font-family: "ApercuRegular", sans-serif;
   font-weight: 600;
   color: #007bff;
+  width: 10%;
 }
 
 .skill .skill-sub-title {
@@ -290,7 +289,82 @@ body {
   padding-right: 10%;
   font-size: 1.15rem;
   line-height: 1.7;
+  width: 80%;
   color: #e7e7e7;
+}
+
+.skill .skill-sub-title .skill-list .project-item {
+  width: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-bottom: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skill .skill-sub-title .skill-list .project-item .project-title a {
+  text-decoration: none;
+  color: #e7e7e7;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "ApercuBold", sans-serif;
+}
+
+.skill .skill-sub-title .skill-list .project-item .project-language {
+  margin-top: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.skill .skill-sub-title .skill-list .project-item .project-language .project__used__item:first-child {
+  margin-left: 0;
+}
+
+.skill .skill-sub-title .skill-list .project-item .project-language .project__used__item {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  visibility: visible;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  display: inline-block;
+  margin: 3px 3px 3px 0;
+  font-family: Inconsolata, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  color: #007bff;
+  border: 1px solid #007bff;
+  background: 0 0;
+  margin-left: 20px;
+}
+
+.skill .skill-sub-title .skill-list .project-item .sub-title {
+  color: #494955;
+  font-size: 0.98rem;
 }
 
 .skill .skill-sub-title .skill-list li {
@@ -303,6 +377,7 @@ body {
 }
 
 .skill .skill-sub-title .resume {
+  padding-left: 4%;
   font-family: "ApercuBold", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,46 +410,6 @@ body {
 .skill .skill-sub-title .arrow:hover::after {
   -webkit-transform: translateX(4px);
   transform: translateX(4px);
-}
-
-.projects {
-  margin-bottom: 6%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-}
-
-.projects .project-title {
-  letter-spacing: 2.61px;
-  font-size: 1.15rem;
-  padding-right: 11%;
-  padding-top: 5%;
-  padding-left: 19%;
-  font-family: "ApercuRegular", sans-serif;
-  font-weight: 600;
-  color: #007bff;
-}
-
-.projects .project-list .project-item .project__used__item {
-  -webkit-font-smoothing: antialiased;
-  line-height: 1.5;
-  visibility: visible;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-  display: inline-block;
-  margin: 3px 3px 3px 0;
-  font-family: Inconsolata, monospace;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 2px 7px;
-  border-radius: 3px;
-  color: #007bff;
-  border: 1px solid #007bff;
-  background: 0 0;
-  margin-left: 0;
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -516,11 +551,78 @@ body {
     padding: 4%;
     font-family: "AperRegular", sans-serif;
   }
+  .skill .skill-sub-title .skill-list .project-item {
+    width: 95%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .skill .skill-sub-title .skill-list .project-item .project-title a {
+    text-decoration: none;
+    color: #e7e7e7;
+    font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: "ApercuBold", sans-serif;
+  }
+  .skill .skill-sub-title .skill-list .project-item .project-language {
+    margin-top: 3%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%;
+    letter-spacing: 1.1px;
+    font-size: 0.91rem;
+  }
+  .skill .skill-sub-title .skill-list .project-item .project-language .project__used__item:first-child {
+    margin-left: 0;
+  }
+  .skill .skill-sub-title .skill-list .project-item .project-language .project__used__item {
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    visibility: visible;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+    display: inline-block;
+    margin: 3px 3px 3px 0;
+    font-family: Inconsolata, monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: #007bff;
+    border: 1px solid #007bff;
+    background: 0 0;
+    margin-left: 20px;
+  }
+  .skill .skill-sub-title .skill-list .project-item .sub-title {
+    margin-top: 1%;
+    color: #494955;
+    letter-spacing: 1.1px;
+    font-size: 0.91rem;
+  }
   .skill .skill-sub-title .skill-list li {
     position: relative;
     padding-left: 15px;
     letter-spacing: 1.1px;
-    font-size: 0.91rem;
     line-height: 1.7;
     color: #e7e7e7;
     font-family: "ApercuRegular", sans-serif;
@@ -665,11 +767,80 @@ body {
     padding: 1%;
     font-family: "AperRegular", sans-serif;
   }
+  .skill .skill-sub-title .skill-list .project-item {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 7%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .skill .skill-sub-title .skill-list .project-item .project-title a {
+    text-decoration: none;
+    color: #e7e7e7;
+    font-size: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: "ApercuBold", sans-serif;
+  }
+  .skill .skill-sub-title .skill-list .project-item .project-language {
+    margin-top: 1%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .skill .skill-sub-title .skill-list .project-item .project-language .project__used__item:first-child {
+    margin-left: 0;
+  }
+  .skill .skill-sub-title .skill-list .project-item .project-language .project__used__item {
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    visibility: visible;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+    display: inline-block;
+    margin: 3px 3px 3px 0;
+    font-family: Inconsolata, monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: #007bff;
+    border: 1px solid #007bff;
+    background: 0 0;
+    margin-left: 20px;
+  }
+  .skill .skill-sub-title .skill-list .project-item .sub-title {
+    color: #494955;
+    font-size: 0.98rem;
+  }
   .skill .skill-sub-title .skill-list li {
     position: relative;
     padding-left: 15px;
     letter-spacing: 1.1px;
-    font-size: 1.1rem;
     line-height: 1.7;
     color: #e7e7e7;
     font-family: "ApercuRegular", sans-serif;
@@ -739,11 +910,13 @@ body {
   }
   .main-section .background-title {
     padding-top: 5%;
+    width: 15%;
     padding-left: 5%;
   }
   .main-section .background-details {
+    width: 55%;
     padding-top: 5%;
-    padding-right: 5%;
+    padding-right: 2%;
   }
   .main-section {
     margin-bottom: 5%;
@@ -796,10 +969,9 @@ body {
   .skill .skill-main-title {
     letter-spacing: 2.61px;
     font-size: 2.62rem;
-    width: 10%;
-    padding-right: 3%;
+    padding-right: 1%;
     padding-top: 5%;
-    padding-left: 5%;
+    padding-left: 15%;
     font-weight: 600;
     color: #007bff;
   }
@@ -813,6 +985,74 @@ body {
     line-height: 1.6;
     padding-right: 2%;
     color: #e7e7e7;
+  }
+  .skill .skill-sub-title .skill-list .project-item {
+    width: 95%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .skill .skill-sub-title .skill-list .project-item .project-title a {
+    text-decoration: none;
+    color: #e7e7e7;
+    font-size: 2.3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: "ApercuBold", sans-serif;
+  }
+  .skill .skill-sub-title .skill-list .project-item .project-language {
+    margin-top: 3%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%;
+    letter-spacing: 1.1px;
+    font-size: 0.91rem;
+  }
+  .skill .skill-sub-title .skill-list .project-item .project-language .project__used__item:first-child {
+    margin-left: 0;
+  }
+  .skill .skill-sub-title .skill-list .project-item .project-language .project__used__item {
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    visibility: visible;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+    display: inline-block;
+    margin: 3px 3px 3px 0;
+    font-family: Inconsolata, monospace;
+    font-size: 1.92rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: #007bff;
+    border: 1px solid #007bff;
+    background: 0 0;
+    margin-left: 20px;
+  }
+  .skill .skill-sub-title .skill-list .project-item .sub-title {
+    margin-top: 1%;
+    color: #494955;
+    letter-spacing: 1.1px;
+    font-size: 2.31rem;
   }
   .skill .skill-sub-title .skill-list li {
     position: relative;
