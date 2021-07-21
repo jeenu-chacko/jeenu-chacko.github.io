@@ -619,6 +619,43 @@ body {
     font-size: 1rem;
     letter-spacing: 1.4px;
   }
+  .footer {
+    width: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .main-text {
+    margin-left: 0.1%;
+    color: #b9b5b5;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-family: "AperRegular", sans-serif;
+  }
+  .footer .contact-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-left: 2%;
+    font-size: 1.4rem;
+    color: #b9b5b5;
+    padding: 1%;
+  }
+  .footer .contact-details a {
+    color: #b9b5b5;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
