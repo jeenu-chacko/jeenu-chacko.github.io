@@ -19,61 +19,11 @@ body {
           box-sizing: border-box;
   overflow-x: hidden;
   background: var(--bg-color);
-  cursor: none;
 }
 
 .btn {
   -ms-flex-item-align: end;
       align-self: flex-end;
-}
-
-.cursor {
-  width: 22px;
-  height: 22px;
-  border: 2px solid white;
-  border-radius: 50%;
-  position: absolute;
-  -webkit-transition-duration: 150ms;
-          transition-duration: 150ms;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
-  -webkit-animation: cursorAnim 0.5s infinite alternate;
-          animation: cursorAnim 0.5s infinite alternate;
-  pointer-events: none;
-}
-
-.cursor::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  border: 2px solid #1b1b1b;
-  border-radius: 50%;
-  opacity: 0.5;
-  top: -2px;
-  left: -2px;
-}
-
-@-webkit-keyframes cursorAnim {
-  from {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  to {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-  }
-}
-
-@keyframes cursorAnim {
-  from {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  to {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-  }
 }
 
 @-webkit-keyframes wave-animation {
@@ -412,10 +362,48 @@ body {
   transform: translateX(4px);
 }
 
+.footer {
+  width: 50%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .main-text {
+  margin-left: 1%;
+  color: #b9b5b5;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-family: "AperRegular", sans-serif;
+}
+
+.footer .contact-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 2%;
+  font-size: 1.4rem;
+  color: #b9b5b5;
+  padding: 1%;
+}
+
+.footer .contact-details a {
+  color: #b9b5b5;
+}
+
 @media only screen and (min-width: 200px) and (max-width: 767px) {
-  .cursor {
-    display: none;
-  }
   .title {
     margin-top: 2%;
     height: 99vh;
@@ -855,12 +843,27 @@ body {
     font-size: 1rem;
     letter-spacing: 1.4px;
   }
+  .footer {
+    width: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media only screen and (min-width: 2000px) {
   .title {
     height: 100vh;
-    width: 40%;
+    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -868,28 +871,23 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
   }
   .title .btn {
     margin-top: -10%;
   }
   .title .sub-title {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
     color: #e7e7e7;
-    font-size: 3.8rem;
+    font-size: 3rem;
     letter-spacing: 1px;
     font-family: "ApercuRegular", sans-serif;
   }
   .title .sub-title .wave {
-    height: 3.8rem;
+    height: 3.7rem;
   }
   .title .main-title {
     line-height: 1.5;
     color: #e7e7e7;
-    font-size: 3.8rem;
+    font-size: 3rem;
     font-family: "ApercuRegular", sans-serif;
   }
   .title .main-title .name {
@@ -901,22 +899,13 @@ body {
     font-size: 2.4rem;
   }
   .title .sub-contact-details .pointoright {
+    height: 2.6rem;
     padding-left: 10px;
     padding-right: 10px;
   }
   .title .sub-contact-details .mail-link {
     color: #e7e7e7;
     padding-bottom: 2px;
-  }
-  .main-section .background-title {
-    padding-top: 5%;
-    width: 15%;
-    padding-left: 5%;
-  }
-  .main-section .background-details {
-    width: 55%;
-    padding-top: 5%;
-    padding-right: 2%;
   }
   .main-section {
     margin-bottom: 5%;
@@ -935,7 +924,7 @@ body {
             justify-content: center;
   }
   .main-section .background-title {
-    font-size: 2.62rem;
+    font-size: 2.2rem;
     width: 10%;
     padding-right: 3%;
     padding-top: 5%;
@@ -945,7 +934,7 @@ body {
     margin-left: 6%;
     letter-spacing: 1.1px;
     width: 55%;
-    font-size: 2.6rem;
+    font-size: 2.1rem;
     line-height: 1.6;
     padding-top: 5%;
     padding-right: 2%;
@@ -968,7 +957,7 @@ body {
   }
   .skill .skill-main-title {
     letter-spacing: 2.61px;
-    font-size: 2.62rem;
+    font-size: 2.2rem;
     padding-right: 1%;
     padding-top: 5%;
     padding-left: 15%;
@@ -981,7 +970,7 @@ body {
     margin-left: 6%;
     letter-spacing: 1.1px;
     width: 55%;
-    font-size: 2.6rem;
+    font-size: 2.1rem;
     line-height: 1.6;
     padding-right: 2%;
     color: #e7e7e7;
@@ -1052,7 +1041,7 @@ body {
     margin-top: 1%;
     color: #707074;
     letter-spacing: 1.1px;
-    font-size: 2.31rem;
+    font-size: 2.11rem;
   }
   .skill .skill-sub-title .skill-list li {
     position: relative;
@@ -1063,8 +1052,45 @@ body {
     font-family: "ApercuRegular", sans-serif;
   }
   .skill .skill-sub-title .resume {
-    font-size: 2.61rem;
-    letter-spacing: 4.7px;
+    font-size: 2.11rem;
+    letter-spacing: 4px;
+  }
+  .footer {
+    width: 50%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer .main-text {
+    margin-left: 1%;
+    color: #b9b5b5;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    font-family: "AperRegular", sans-serif;
+  }
+  .footer .contact-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 15%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-left: 1%;
+    font-size: 1.8rem;
+    color: #b9b5b5;
+    padding: 1%;
+  }
+  .footer .contact-details a {
+    color: #b9b5b5;
   }
 }
 /*# sourceMappingURL=main.css.map */
