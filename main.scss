@@ -179,20 +179,19 @@ body {
         flex-direction: column;
         align-items: flex-start;
         flex-wrap: wrap;
+        font-size: 1.05rem;
         .project-title a {
           text-decoration: none;
           color: #e7e7e7;
-          font-size: 1rem;
+
           display: flex;
           flex-direction: row;
-          justify-content: center;
           font-family: "ApercuBold", sans-serif;
         }
 
         .project-language {
           margin-top: 1%;
           display: flex;
-          justify-content: start;
           .project__used__item:first-child {
             margin-left: 0;
           }
@@ -267,27 +266,25 @@ body {
   }
 }
 .footer {
-  width: 50%;
-  position: fixed;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+
   display: flex;
   justify-content: flex-end;
   align-items: center;
   .main-text {
     margin-left: 1%;
     color: #b9b5b5;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 2px;
 
     font-family: "AperRegular", sans-serif;
   }
   .contact-details {
     display: flex;
-    width: 20%;
+    min-width: 200px;
     justify-content: space-around;
     margin-left: 2%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #b9b5b5;
     padding: 1%;
     a {
@@ -357,68 +354,71 @@ body {
   .main-section {
     margin-top: 1%;
     margin-bottom: 2%;
+    padding-left: 5vw;
     height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    width: 90%;
     .background-title {
-      width: 70%;
+      width: 75%;
       font-size: 1rem;
-      padding: 4%;
       padding-left: 0;
+      padding-right: 11%;
       letter-spacing: 1.1px;
       font-family: "ApercuBold", sans-serif;
       color: #007bff;
     }
     .background-details {
-      width: 73%;
+      width: 75%;
       letter-spacing: 1.1px;
+      padding-top: 5%;
+      padding-right: 10%;
       font-size: 0.91rem;
       line-height: 1.6;
       color: #e7e7e7;
-      padding: 4%;
       font-family: "AperRegular", sans-serif;
     }
   }
   .skill {
-    margin-top: 14%;
+    margin-top: 20%;
     margin-bottom: 2%;
+    padding-left: 5vw;
     height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .skill-main-title {
-      width: 70%;
+      width: 75%;
       font-size: 1rem;
-      padding: 4%;
       padding-left: 0;
       letter-spacing: 1.1px;
       font-family: "ApercuBold", sans-serif;
       color: #007bff;
+      padding-right: 11%;
+      padding-top: 5%;
     }
 
     .skill-sub-title {
-      width: 73%;
+      width: 75%;
       letter-spacing: 1.1px;
       font-size: 0.91rem;
       line-height: 1.6;
       color: #e7e7e7;
-      padding: 4%;
       font-family: "AperRegular", sans-serif;
 
       .skill-list {
         .project-item {
-          width: 95%;
+          width: 100%;
           padding-top: 1%;
           padding-bottom: 1%;
           margin-bottom: 15%;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-
+          flex-wrap: wrap;
           .project-title a {
             text-decoration: none;
             color: #e7e7e7;
@@ -430,30 +430,27 @@ body {
           }
 
           .project-language {
+            width: 100%;
             margin-top: 3%;
             display: flex;
-            width: 70%;
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-content: flex-start;
             letter-spacing: 1.1px;
             font-size: 0.91rem;
-            .project__used__item:first-child {
-              margin-left: 0;
-            }
+            padding: 2px;
+
             .project__used__item {
               -webkit-font-smoothing: antialiased;
-              line-height: 1.5;
               visibility: visible;
-              box-sizing: inherit;
-              display: inline-block;
-              margin: 3px 3px 3px 0;
               font-family: Inconsolata, monospace;
               font-size: 0.75rem;
               font-weight: 700;
-              padding: 2px 7px;
               border-radius: 3px;
               color: #007bff;
               border: 1px solid #007bff;
               background: 0 0;
-              margin-left: 20px;
+              padding: 2px 4px;
             }
           }
           .sub-title {
@@ -480,29 +477,27 @@ body {
     }
   }
   .footer {
+    margin-top: 15%;
     width: 100%;
-    position: fixed;
-    right: 0;
-    bottom: 0;
+    padding-bottom: 10%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     .main-text {
-      margin-left: 0.1%;
       color: #b9b5b5;
-      font-size: 1rem;
+      font-size: 0.91rem;
       letter-spacing: 2px;
-
+      margin-bottom: 3%;
       font-family: "AperRegular", sans-serif;
     }
     .contact-details {
+      margin-top: 3%;
       display: flex;
-      width: 30%;
+      width: 40%;
       justify-content: space-around;
-      margin-left: 2%;
-      font-size: 1.4rem;
+      font-size: 1rem;
       color: #b9b5b5;
-      padding: 1%;
       a {
         color: #b9b5b5;
       }
@@ -597,6 +592,7 @@ body {
     margin-bottom: 2%;
     height: max-content;
     display: flex;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -690,24 +686,34 @@ body {
   }
   .footer {
     width: 100%;
-    position: fixed;
-    right: 0;
-    bottom: 0;
+    padding-bottom: 5%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
+    .main-text {
+      color: #b9b5b5;
+      font-size: 0.91rem;
+      letter-spacing: 2px;
+      font-family: "AperRegular", sans-serif;
+    }
+    .contact-details {
+      display: flex;
+      width: 20%;
+      justify-content: space-around;
+      font-size: 1rem;
+      color: #b9b5b5;
+      a {
+        color: #b9b5b5;
+      }
+    }
   }
 }
 
 @media only screen and (min-width: 2000px) {
   .title {
     height: 100vh;
-    width: 50%;
     display: flex;
     flex-direction: column;
-    .btn {
-      margin-top: -10%;
-    }
     .sub-title {
       color: #e7e7e7;
       font-size: 3rem;
@@ -867,13 +873,6 @@ body {
     }
   }
   .footer {
-    width: 50%;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     .main-text {
       margin-left: 1%;
       color: #b9b5b5;
@@ -884,10 +883,10 @@ body {
     }
     .contact-details {
       display: flex;
-      width: 15%;
+      width: 10%;
       justify-content: space-around;
       margin-left: 1%;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       color: #b9b5b5;
       padding: 1%;
       a {

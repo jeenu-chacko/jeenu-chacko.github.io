@@ -260,12 +260,12 @@ body {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  font-size: 1.05rem;
 }
 
 .skill .skill-sub-title .skill-list .project-item .project-title a {
   text-decoration: none;
   color: #e7e7e7;
-  font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,9 +273,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   font-family: "ApercuBold", sans-serif;
 }
 
@@ -284,9 +281,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
 }
 
 .skill .skill-sub-title .skill-list .project-item .project-language .project__used__item:first-child {
@@ -363,10 +357,7 @@ body {
 }
 
 .footer {
-  width: 50%;
-  position: fixed;
-  right: 0;
-  bottom: 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,7 +372,7 @@ body {
 .footer .main-text {
   margin-left: 1%;
   color: #b9b5b5;
-  font-size: 1rem;
+  font-size: 1.2rem;
   letter-spacing: 2px;
   font-family: "AperRegular", sans-serif;
 }
@@ -390,11 +381,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 20%;
+  min-width: 200px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-left: 2%;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #b9b5b5;
   padding: 1%;
 }
@@ -466,6 +457,7 @@ body {
   .main-section {
     margin-top: 1%;
     margin-bottom: 2%;
+    padding-left: 5vw;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -482,28 +474,31 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 90%;
   }
   .main-section .background-title {
-    width: 70%;
+    width: 75%;
     font-size: 1rem;
-    padding: 4%;
     padding-left: 0;
+    padding-right: 11%;
     letter-spacing: 1.1px;
     font-family: "ApercuBold", sans-serif;
     color: #007bff;
   }
   .main-section .background-details {
-    width: 73%;
+    width: 75%;
     letter-spacing: 1.1px;
+    padding-top: 5%;
+    padding-right: 10%;
     font-size: 0.91rem;
     line-height: 1.6;
     color: #e7e7e7;
-    padding: 4%;
     font-family: "AperRegular", sans-serif;
   }
   .skill {
-    margin-top: 14%;
+    margin-top: 20%;
     margin-bottom: 2%;
+    padding-left: 5vw;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
@@ -522,25 +517,25 @@ body {
             align-items: center;
   }
   .skill .skill-main-title {
-    width: 70%;
+    width: 75%;
     font-size: 1rem;
-    padding: 4%;
     padding-left: 0;
     letter-spacing: 1.1px;
     font-family: "ApercuBold", sans-serif;
     color: #007bff;
+    padding-right: 11%;
+    padding-top: 5%;
   }
   .skill .skill-sub-title {
-    width: 73%;
+    width: 75%;
     letter-spacing: 1.1px;
     font-size: 0.91rem;
     line-height: 1.6;
     color: #e7e7e7;
-    padding: 4%;
     font-family: "AperRegular", sans-serif;
   }
   .skill .skill-sub-title .skill-list .project-item {
-    width: 95%;
+    width: 100%;
     padding-top: 1%;
     padding-bottom: 1%;
     margin-bottom: 15%;
@@ -554,6 +549,8 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .skill .skill-sub-title .skill-list .project-item .project-title a {
     text-decoration: none;
@@ -572,34 +569,34 @@ body {
     font-family: "ApercuBold", sans-serif;
   }
   .skill .skill-sub-title .skill-list .project-item .project-language {
+    width: 100%;
     margin-top: 3%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 70%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
     letter-spacing: 1.1px;
     font-size: 0.91rem;
-  }
-  .skill .skill-sub-title .skill-list .project-item .project-language .project__used__item:first-child {
-    margin-left: 0;
+    padding: 2px;
   }
   .skill .skill-sub-title .skill-list .project-item .project-language .project__used__item {
     -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
     visibility: visible;
-    -webkit-box-sizing: inherit;
-            box-sizing: inherit;
-    display: inline-block;
-    margin: 3px 3px 3px 0;
     font-family: Inconsolata, monospace;
     font-size: 0.75rem;
     font-weight: 700;
-    padding: 2px 7px;
     border-radius: 3px;
     color: #007bff;
     border: 1px solid #007bff;
     background: 0 0;
-    margin-left: 20px;
+    padding: 2px 4px;
   }
   .skill .skill-sub-title .skill-list .project-item .sub-title {
     margin-top: 1%;
@@ -620,38 +617,40 @@ body {
     letter-spacing: 1.4px;
   }
   .footer {
+    margin-top: 15%;
     width: 100%;
-    position: fixed;
-    right: 0;
-    bottom: 0;
+    padding-bottom: 10%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
   .footer .main-text {
-    margin-left: 0.1%;
     color: #b9b5b5;
-    font-size: 1rem;
+    font-size: 0.91rem;
     letter-spacing: 2px;
+    margin-bottom: 3%;
     font-family: "AperRegular", sans-serif;
   }
   .footer .contact-details {
+    margin-top: 3%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 30%;
+    width: 40%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin-left: 2%;
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: #b9b5b5;
-    padding: 1%;
   }
   .footer .contact-details a {
     color: #b9b5b5;
@@ -882,25 +881,41 @@ body {
   }
   .footer {
     width: 100%;
-    position: fixed;
-    right: 0;
-    bottom: 0;
+    padding-bottom: 5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .footer .main-text {
+    color: #b9b5b5;
+    font-size: 0.91rem;
+    letter-spacing: 2px;
+    font-family: "AperRegular", sans-serif;
+  }
+  .footer .contact-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 20%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 1rem;
+    color: #b9b5b5;
+  }
+  .footer .contact-details a {
+    color: #b9b5b5;
   }
 }
 
 @media only screen and (min-width: 2000px) {
   .title {
     height: 100vh;
-    width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -908,9 +923,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .title .btn {
-    margin-top: -10%;
   }
   .title .sub-title {
     color: #e7e7e7;
@@ -1092,21 +1104,6 @@ body {
     font-size: 2.11rem;
     letter-spacing: 4px;
   }
-  .footer {
-    width: 50%;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .footer .main-text {
     margin-left: 1%;
     color: #b9b5b5;
@@ -1118,11 +1115,11 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 15%;
+    width: 10%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     margin-left: 1%;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     color: #b9b5b5;
     padding: 1%;
   }
