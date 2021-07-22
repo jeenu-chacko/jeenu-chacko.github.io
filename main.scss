@@ -129,7 +129,7 @@ body {
     font-family: "ApercuRegular", sans-serif;
     font-weight: 600;
     color: #007bff;
-    width: 15%;
+    min-width: 15%;
   }
   .background-details {
     letter-spacing: 1.1px;
@@ -137,7 +137,7 @@ body {
     line-height: 1.7;
     color: #e7e7e7;
     padding-top: 5%;
-    padding-right: 10%;
+    padding-right: 5%;
 
     font-family: "ApercuRegular", sans-serif;
   }
@@ -157,7 +157,7 @@ body {
     font-family: "ApercuRegular", sans-serif;
     font-weight: 600;
     color: #007bff;
-    width: 10%;
+    min-width: 15%;
   }
 
   .skill-sub-title {
@@ -414,7 +414,7 @@ body {
           width: 100%;
           padding-top: 1%;
           padding-bottom: 1%;
-          margin-bottom: 15%;
+          margin-bottom: 20%;
           display: flex;
           flex-direction: column;
           align-items: flex-start;
@@ -423,7 +423,9 @@ body {
             text-decoration: none;
             color: #e7e7e7;
             font-size: 1rem;
+            letter-spacing: 2px;
             display: flex;
+            line-height: 2;
             flex-direction: row;
             justify-content: center;
             font-family: "ApercuBold", sans-serif;
@@ -753,14 +755,14 @@ body {
   }
 
   .main-section {
-    margin-bottom: 5%;
+    margin-bottom: 6%;
     height: max-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
     .background-title {
-      font-size: 2.2rem;
-      width: 10%;
+      font-size: 2rem;
+      min-width: 10%;
       padding-right: 3%;
       padding-top: 5%;
       padding-left: 5%;
@@ -777,19 +779,21 @@ body {
   }
 
   .skill {
-    margin-bottom: 5%;
+    margin-bottom: 9%;
     height: max-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
+
     .skill-main-title {
       letter-spacing: 2.61px;
-      font-size: 2.2rem;
+      font-size: 2rem;
       padding-right: 1%;
       padding-top: 5%;
       padding-left: 15%;
       font-weight: 600;
       color: #007bff;
+      min-width: 13%;
     }
 
     .skill-sub-title {
@@ -798,7 +802,7 @@ body {
       margin-left: 6%;
       letter-spacing: 1.1px;
       width: 55%;
-      font-size: 2.1rem;
+      font-size: 2rem;
       line-height: 1.6;
       padding-right: 2%;
       color: #e7e7e7;
@@ -813,9 +817,10 @@ body {
           align-items: flex-start;
 
           .project-title a {
+            letter-spacing: 3px;
             text-decoration: none;
             color: #e7e7e7;
-            font-size: 2.3rem;
+            font-size: 2rem;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -853,7 +858,7 @@ body {
             margin-top: 1%;
             color: #707074;
             letter-spacing: 1.1px;
-            font-size: 2.11rem;
+            font-size: 1.92rem;
           }
         }
       }
@@ -873,10 +878,11 @@ body {
     }
   }
   .footer {
+    margin-top: -5%;
     .main-text {
       margin-left: 1%;
       color: #b9b5b5;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       letter-spacing: 2px;
 
       font-family: "AperRegular", sans-serif;
